@@ -4,8 +4,6 @@ import { ImageResponse } from 'next/og';
 import { createPublicClient, http } from 'viem';
 import { base } from 'viem/chains';
 
-export const runtime = 'edge';
-
 // Helper to decode Base64 tokenURI and extract NFT data
 const decodeTokenURI = (base64Uri: string) => {
   try {
@@ -60,18 +58,22 @@ export async function GET(request: Request) {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
           width: '100%',
           height: '100%',
-          backgroundImage: 'url(https://clankedstamp.vercel.app/og-image.jpg)',
+          backgroundImage: 'url(https://clankedstamp.vercel.app/bg-paper.jpg)',
           backgroundSize: 'cover',
-          backgroundColor: '#f4f4f5',
-          fontSize: 24,
-          color: '#333',
         }}
       >
-        No tokenId provided
+        <ClankedStampSVG
+          northColor={"#696b6a"}
+          northeastColor={"#696b6a"}
+          eastColor={"#696b6a"}
+          southeastColor={"#696b6a"}
+          southColor={"#696b6a"}
+          southwestColor={"#696b6a"}
+          westColor={"#696b6a"}
+          northwestColor={"#696b6a"}
+        />
       </div>,
       { width: 1200, height: 630 }
     );
@@ -108,28 +110,16 @@ export async function GET(request: Request) {
         }}
       >
         {/* Clanked Stamp details */}
-        <div
-          style={{
-            display: 'flex',
-            fontSize: 40,
-            width: '100%',
-            height: '100%',
-            textAlign: 'center',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <ClankedStampSVG
-            northColor={northColor}
-            northeastColor={northeastColor}
-            eastColor={eastColor}
-            southeastColor={southeastColor}
-            southColor={southColor}
-            southwestColor={southwestColor}
-            westColor={westColor}
-            northwestColor={northwestColor}
-          />
-        </div>
+        <ClankedStampSVG
+          northColor={northColor}
+          northeastColor={northeastColor}
+          eastColor={eastColor}
+          southeastColor={southeastColor}
+          southColor={southColor}
+          southwestColor={southwestColor}
+          westColor={westColor}
+          northwestColor={northwestColor}
+        />
       </div>,
       {
         width: 1200,
@@ -142,20 +132,27 @@ export async function GET(request: Request) {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
           width: '100%',
           height: '100%',
-          backgroundImage: 'url(https://clankedstamp.vercel.app/og-image.jpg)',
+          backgroundImage: 'url(https://clankedstamp.vercel.app/bg-paper.jpg)',
           backgroundSize: 'cover',
-          backgroundColor: '#f8d7da',
-          fontSize: 24,
-          color: '#842029',
         }}
       >
-        Error generating OG image
+        <ClankedStampSVG
+          northColor={"#8a8787"}
+          northeastColor={"#8a8787"}
+          eastColor={"#8a8787"}
+          southeastColor={"#8a8787"}
+          southColor={"#8a8787"}
+          southwestColor={"#8a8787"}
+          westColor={"#8a8787"}
+          northwestColor={"#8a8787"}
+        />
       </div>,
-      { width: 1200, height: 630 }
+      {
+        width: 1200,
+        height: 630
+      }
     );
   }
 }

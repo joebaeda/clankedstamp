@@ -16,11 +16,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const ogImageUrl = `${appUrl}/og-image.jpg`;
 
   return {
-    title: "Clanked | Clanker Based",
-    description: "One click to launch your cryptocurrency based project to clanker ecosystem",
+    title: "Clanked Stamp | Clanker Based Stamp",
+    description: "Clanked Stamp is a Stamp NFT that can be used to claim Clanked project rewards obtained from Clanker Protocol and the total supply is only 3333 items.",
     openGraph: {
-      title: "Clanked | Clanker Based",
-      description: "One click to launch your cryptocurrency based project to clanker ecosystem",
+      title: "Clanked | Clanker Based Stamp",
+      description: "Clanked Stamp is a Stamp NFT that can be used to claim Clanked project rewards obtained from Clanker Protocol and the total supply is only 3333 items.",
       url: appUrl,
       type: 'website',
       images: [
@@ -28,14 +28,14 @@ export async function generateMetadata(): Promise<Metadata> {
           url: ogImageUrl,
           width: 1200,
           height: 600,
-          alt: 'Clanker Based',
+          alt: 'Clanker Based Stamp',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: "Clanked | Clanker Based",
-      description: "One click to launch your cryptocurrency based project to clanker ecosystem",
+      title: "Clanked Stamp | Clanker Based Stamp",
+      description: "Clanked Stamp is a Stamp NFT that can be used to claim Clanked project rewards obtained from Clanker Protocol and the total supply is only 3333 items.",
       images: [ogImageUrl],
     },
     icons: {
