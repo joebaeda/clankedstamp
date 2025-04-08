@@ -69,7 +69,7 @@ export default function Home() {
   const linkToShare = useCallback((tokenId?: number) => {
     if (tokenId) {
       sdk.actions.openUrl(
-        `https://warpcast.com/~/compose?text=Just%20Minted%20my%20Clanked%20Stamp!%20by%20%40joebaeda&embeds[]=https://clankedstamp.vercel.app/${tokenId}`
+        `https://warpcast.com/~/compose?text=Clanked%20Stamp%20%23${tokenId}%20has%20been%20minted%20ONCHAIN%20on%20%40base%0A%0AMini%20Apps%20by%20%40joebaeda&embeds[]=https://clankedstamp.vercel.app/${tokenId}`
       );
     }
   }, []);
